@@ -1,23 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   free_ptr.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgarouj <mgarouj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/31 12:22:45 by mgarouj           #+#    #+#             */
-/*   Updated: 2025/01/31 21:09:01 by mgarouj          ###   ########.fr       */
+/*   Created: 2025/02/01 06:03:34 by mgarouj           #+#    #+#             */
+/*   Updated: 2025/02/01 06:09:32 by mgarouj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-size_t	ft_strlen(const char *s)
+void	free_ptr(char **array)
 {
-	size_t	len;
+	int	i;
 
-	len = 0;
-	while (s[len])
-		len++;
-	return (len);
+	i = 0;
+	if (!array)
+		return ;
+	while (array[i])
+	{
+		free(array[i]);
+		i++;
+	}
+	free(array);
 }

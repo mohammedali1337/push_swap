@@ -1,23 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgarouj <mgarouj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/31 12:22:45 by mgarouj           #+#    #+#             */
-/*   Updated: 2025/01/31 21:09:01 by mgarouj          ###   ########.fr       */
+/*   Created: 2024/11/21 15:36:04 by mgarouj           #+#    #+#             */
+/*   Updated: 2025/01/31 21:11:21 by mgarouj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#ifndef GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
 
-size_t	ft_strlen(const char *s)
-{
-	size_t	len;
+# include <unistd.h>
+# include <limits.h>
+# include <stdlib.h>
+# include "../push_swap.h"
 
-	len = 0;
-	while (s[len])
-		len++;
-	return (len);
-}
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 42
+# endif
+
+char	*get_next_line(int fd);
+char	*ft_strchr(const char *s, int c);
+char	*ft_strjoin( char const *s1, char const *s2);
+size_t	ft_strlen(const	char *str);
+char	*ft_strdup(const char *s1);
+
+#endif

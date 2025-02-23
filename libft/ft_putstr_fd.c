@@ -5,12 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgarouj <mgarouj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/28 10:44:40 by mgarouj           #+#    #+#             */
-/*   Updated: 2024/10/29 10:48:18 by mgarouj          ###   ########.fr       */
+/*   Created: 2025/01/24 11:07:56 by mgarouj           #+#    #+#             */
+/*   Updated: 2025/01/31 21:09:26 by mgarouj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../push_swap.h"
 
 void	ft_putstr_fd(char *s, int fd)
 {

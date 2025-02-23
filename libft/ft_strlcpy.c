@@ -5,12 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgarouj <mgarouj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/23 12:26:49 by mgarouj           #+#    #+#             */
-/*   Updated: 2024/11/11 06:22:23 by mgarouj          ###   ########.fr       */
+/*   Created: 2025/01/24 14:47:50 by mgarouj           #+#    #+#             */
+/*   Updated: 2025/01/31 21:09:07 by mgarouj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../push_swap.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {

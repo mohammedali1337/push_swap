@@ -6,11 +6,11 @@
 /*   By: mgarouj <mgarouj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 09:46:22 by mgarouj           #+#    #+#             */
-/*   Updated: 2024/11/07 22:27:45 by mgarouj          ###   ########.fr       */
+/*   Updated: 2025/01/31 11:57:48 by mgarouj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../push_swap.h"
 
 char	*ft_strdup(const char *s1)
 {

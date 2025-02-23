@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   check_duplicate.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgarouj <mgarouj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/31 12:22:45 by mgarouj           #+#    #+#             */
-/*   Updated: 2025/01/31 21:09:01 by mgarouj          ###   ########.fr       */
+/*   Created: 2025/01/24 14:53:53 by mgarouj           #+#    #+#             */
+/*   Updated: 2025/01/31 21:15:05 by mgarouj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-size_t	ft_strlen(const char *s)
+int	check_duplicte_error(t_stack *a, int x)
 {
-	size_t	len;
-
-	len = 0;
-	while (s[len])
-		len++;
-	return (len);
+	if (!a)
+		return (0);
+	while (a)
+	{
+		if (a->content == x)
+			return (1);
+		a = a->next;
+	}
+	return (0);
 }

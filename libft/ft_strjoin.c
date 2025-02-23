@@ -6,11 +6,11 @@
 /*   By: mgarouj <mgarouj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 19:32:27 by mgarouj           #+#    #+#             */
-/*   Updated: 2024/11/16 11:43:52 by mgarouj          ###   ########.fr       */
+/*   Updated: 2025/01/31 12:24:17 by mgarouj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../push_swap.h"
 
 static char	*join_str(char *str, char const *s1, char const *s2)
 {

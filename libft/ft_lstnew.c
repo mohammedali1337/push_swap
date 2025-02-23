@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgarouj <mgarouj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/31 12:22:45 by mgarouj           #+#    #+#             */
-/*   Updated: 2025/01/31 21:09:01 by mgarouj          ###   ########.fr       */
+/*   Created: 2025/01/24 09:39:08 by mgarouj           #+#    #+#             */
+/*   Updated: 2025/01/31 21:10:08 by mgarouj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-size_t	ft_strlen(const char *s)
+t_stack	*ft_lstnew(int content)
 {
-	size_t	len;
+	t_stack	*new;
 
-	len = 0;
-	while (s[len])
-		len++;
-	return (len);
+	new = malloc(sizeof(t_stack));
+	if (!new)
+		return (NULL);
+	new -> content = content;
+	new -> i = 0;
+	new -> next = NULL;
+	return (new);
 }

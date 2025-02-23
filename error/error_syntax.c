@@ -1,23 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   error_syntax.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgarouj <mgarouj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/31 12:22:45 by mgarouj           #+#    #+#             */
-/*   Updated: 2025/01/31 21:09:01 by mgarouj          ###   ########.fr       */
+/*   Created: 2025/01/24 14:52:12 by mgarouj           #+#    #+#             */
+/*   Updated: 2025/01/31 21:15:20 by mgarouj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-size_t	ft_strlen(const char *s)
+int	error_syntax(char *str)
 {
-	size_t	len;
+	int	i;
 
-	len = 0;
-	while (s[len])
-		len++;
-	return (len);
+	i = 1;
+	if (!((str[0] == '+' || str[0] == '-') || (str[0] >= '0' && str[0] <= '9')))
+		return (1);
+	if ((str[0] == '+' || str[0] == '-') && !(str[1] >= '0' && str[1] <= '9'))
+		return (1);
+	while (str[i])
+	{
+		if (!(str[i] >= '0' && str[i] <= '9'))
+			return (1);
+		i++;
+	}
+	return (0);
 }

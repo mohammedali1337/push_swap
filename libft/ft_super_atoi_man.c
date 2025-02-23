@@ -6,11 +6,11 @@
 /*   By: mgarouj <mgarouj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 15:52:50 by mgarouj           #+#    #+#             */
-/*   Updated: 2025/01/05 17:20:25 by mgarouj          ###   ########.fr       */
+/*   Updated: 2025/01/30 15:29:35 by mgarouj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../push_swap.h"
 
 static int	sign_spc(char *str, int *skip)
 {

@@ -1,23 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgarouj <mgarouj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/31 12:22:45 by mgarouj           #+#    #+#             */
-/*   Updated: 2025/01/31 21:09:01 by mgarouj          ###   ########.fr       */
+/*   Created: 2025/01/24 09:45:41 by mgarouj           #+#    #+#             */
+/*   Updated: 2025/01/31 21:09:49 by mgarouj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-size_t	ft_strlen(const char *s)
+int	ft_lstsize(t_stack *lst)
 {
-	size_t	len;
+	int	count;
 
-	len = 0;
-	while (s[len])
-		len++;
-	return (len);
+	count = 0;
+	if (!lst)
+		return (0);
+	while (lst != NULL)
+	{
+		count++;
+		lst = lst -> next;
+	}
+	return (count);
 }

@@ -6,11 +6,11 @@
 /*   By: mgarouj <mgarouj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 15:04:02 by mgarouj           #+#    #+#             */
-/*   Updated: 2025/01/05 15:46:21 by mgarouj          ###   ########.fr       */
+/*   Updated: 2025/01/31 21:09:20 by mgarouj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../push_swap.h"
 
 static size_t	count_words(char const *s, char c)
 {
@@ -88,14 +88,14 @@ static void	*free_tab(char **tab)
 	return (NULL);
 }
 
-char	**ft_split(char const *s, char c)
+char	**ft_split(char const *s)
 {
 	size_t	words;
 	char	**tab;
 
 	if (!s)
 		return (NULL);
-	words = count_words(s, c);
+	words = count_words(s, ' ');
 	if (!words)
 		exit(1);
 	tab = (char **)malloc(sizeof(char *) * (words + 2));
@@ -105,7 +105,7 @@ char	**ft_split(char const *s, char c)
 	if (!tab[0])
 		return (NULL);
 	ft_strlcpy(tab[0], "hello", 6);
-	if (!fill_tab(tab, s, c, words))
+	if (!fill_tab(tab, s, ' ', words))
 		return (free_tab(tab));
 	return (tab);
 }

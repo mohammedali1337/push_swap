@@ -1,23 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgarouj <mgarouj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/31 12:22:45 by mgarouj           #+#    #+#             */
-/*   Updated: 2025/01/31 21:09:01 by mgarouj          ###   ########.fr       */
+/*   Created: 2025/01/24 09:33:41 by mgarouj           #+#    #+#             */
+/*   Updated: 2025/01/31 21:10:31 by mgarouj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-size_t	ft_strlen(const char *s)
+void	ft_lstadd_back(t_stack **lst, t_stack *new_node)
 {
-	size_t	len;
+	t_stack	*last;
 
-	len = 0;
-	while (s[len])
-		len++;
-	return (len);
+	if (!lst || !new_node)
+		return ;
+	if (!*lst)
+		*lst = new_node;
+	else
+	{
+		last = *lst;
+		while (last->next)
+		{
+			last = last->next;
+		}
+		last->next = new_node;
+	}
 }
