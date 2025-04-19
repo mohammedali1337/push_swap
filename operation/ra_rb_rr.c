@@ -17,6 +17,8 @@ void	ft_ra(t_stack **a, int x)
 	t_stack	*tmp;
 	t_stack	*last_node;
 
+	if (!*a || !a)
+		return ;
 	last_node = ft_lstlast(*a);
 	tmp = *a;
 	*a = (*a)->next;
@@ -28,6 +30,8 @@ void	ft_ra(t_stack **a, int x)
 
 void	ft_rb(t_stack **b, int x)
 {
+	if (!*b || !b)
+		return ;
 	ft_ra(b, 0);
 	if (x)
 		ft_putstr_fd("rb\n", 1);

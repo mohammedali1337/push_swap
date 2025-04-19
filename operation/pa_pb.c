@@ -16,7 +16,8 @@ void	push(t_stack **source, t_stack **dest)
 {
 	t_stack	*tmp;
 
-	
+	if (!source || !*source || !dest)
+		return ;	
 	if (*source == NULL)
 		return ;
 	tmp = (*source)->next;

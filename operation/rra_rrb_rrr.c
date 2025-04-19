@@ -17,6 +17,8 @@ void	ft_rra(t_stack **a, int x)
 	t_stack	*last;
 	t_stack	*before_last;
 
+	if (!*a || !a)
+		return ;
 	last = *a;
 	before_last = NULL;
 	while (last->next)
@@ -33,6 +35,8 @@ void	ft_rra(t_stack **a, int x)
 
 void	ft_rrb(t_stack **b, int x)
 {
+	if (!*b || !b)
+		return ;
 	ft_rra(b, 0);
 	if (x)
 		ft_putstr_fd("rrb\n", 1);

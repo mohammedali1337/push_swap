@@ -17,6 +17,8 @@ void	ft_sa(t_stack **a, int x)
 	t_stack	*node1;
 	t_stack	*node2;
 
+	if (!*a || !a)
+		return ;
 	node1 = *a;
 	node2 = node1->next;
 	if (!node1 || !node2)
@@ -30,6 +32,8 @@ void	ft_sa(t_stack **a, int x)
 
 void	ft_sb(t_stack **b, int x)
 {
+	if (!*b || !b)
+		return ;
 	ft_sa(b, 0);
 	if (x)
 		ft_putstr_fd("sb\n", 1);
